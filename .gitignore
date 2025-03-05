@@ -1,0 +1,9 @@
+# Ignore Eclipse files
+.classpath
+.project
+.settings/
+
+# Ignore build output (if any)
+bin/
+build/
+target/

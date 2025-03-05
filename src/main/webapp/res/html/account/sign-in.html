@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sign In</title>
+</head>
+<body>
+	<!-- Submit a form of username and password for authentication 
+	 Also include a "Forgot Password" function  -->
+	<fieldset>
+	<h1>Sign In</h1>
+	<form action="/SignIn" method="post">
+		<p>
+			<label for="username">Username:</label><br>
+			<input type="text" id="username" name="username" maxlength="16" required>
+		</p>
+		<p>
+			<label for="password">Password:</label><br>
+			<input type="password" id="password" name="password" maxlength="16" required>
+		</p>
+		<p>
+			<input type="submit" value="Sign In">
+		</p>
+	</form>
+	<p>
+		<a href="forgot-password.html">Forgot password?</a>
+	</p>
+	<p>
+		First time here?
+		<a href="sign-up.html">Create an account</a>
+	</p>
+	</fieldset>
+</body>
+</html>

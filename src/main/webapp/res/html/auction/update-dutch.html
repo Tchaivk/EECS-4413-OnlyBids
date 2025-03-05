@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dutch Auction Price Update</title>
+  </head>
+  <body>
+  	<!-- This page is for sellers to update the price during a Dutch auction -->
+    <h1>Dutch Auction Price Update</h1>
+    <form action="/UpdateDutchPrice" method="post">
+      <p>
+        <label for="newPrice">The New Price is:</label><br>
+        <input type="number" id="newPrice" name="newPrice" required>
+      </p>
+      <p>
+        <input type="submit" value="Update Price">
+      </p>
+    </form>
+  </body>
+</html>

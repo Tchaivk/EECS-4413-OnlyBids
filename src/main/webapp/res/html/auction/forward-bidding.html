@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Forward Auction Bidding</title>
+</head>
+<body>
+	<h1>Forward Auction Bidding</h1>
+	<p>Current highest bid:<!-- Current Highest Bid --></p>
+	<p>Current highest bidder:<!-- Bidder name --></p>
+	<form action="/FowardBid" method="post">
+		<p>
+			<label for="newBid">Enter your bid (must be higher than the current bid!)</label><br>
+			<input type="number" id="newBid" name="newBid" required>
+		</p>
+		<p>
+			<input type="submit" value="Place Bid">
+		</p>
+	</form>
+</body>
+</html>

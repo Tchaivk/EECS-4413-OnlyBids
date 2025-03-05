@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Catalogue</title>
+</head>
+<body>
+	<!-- Create a page with a search bar for auction items,
+		 also display a list of items with details like item name, current bid, auction type and remaining time -->
+	<h1>Catalogue of Auctioned Items</h1>
+	<form action="/CatalogueSearch" method="get">
+		<p>
+			<label for="keyword">Search for Items:</label><br>
+			<input type="text" id="keyword" name="keyword" maxlength="80" required>
+		</p>
+		<p>
+			<input type="submit" value="Search">
+		</p>
+	</form>
+	
+  <fieldset>
+	<legend>Search Results</legend>
+	<!-- placeholders, needs to be further implemented -->
+	<p>4 item(s) have been found</p>
+	
+	<form action="/SelectPicture" method="post">
+		<p>
+			<input type="radio" id="picture1" name="pictureId" value="picture1" required>
+			<label for="picture1">
+				<img src="../../images/Pagoda_in_Snow.jpg" alt="Pagoda in snow">
+			</label>
+		</p>
+		<p>
+			<input type="radio" id="picture2" name="pictureId" value="picture2">
+			<label for="picture2">
+				<img src="../../images/The_Laocoon_and_his_Sons.jpg" alt="The Laocoon and His Sons">
+			</label>
+		</p>
+		<p>
+			<input type="radio" id="picture3" name="pictureId" value="picture3">
+			<label for="picture3">
+				<img src="../../images/The_Wanderer_above_the_Mist.jpg" alt="The Wanderer above the Mist">
+			</label>
+		</p>
+		<p>
+			<input type="radio" id="picture4" name="pictureId" value="picture4">
+			<label for="picture4">
+				<img src="../../images/V-J_day_in_times_square.jpg" alt="V-J Day in Times Square">
+			</label>
+		</p>
+		<p>
+			<input type="submit" value="Confirm">
+		</p>
+	  </form>
+	</fieldset>
+</body>
+</html>

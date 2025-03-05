@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sell Item</title>
+  </head>
+  <body>
+  	<!-- submit a form for sellers to upload items for sell -->
+    <h1>Sell Item</h1>
+    <form action="/uploadItemPics" method="post" enctype="multipart/form-data">
+  		<label for="picture">Upload Picture of The Item:</label><br>
+  		<br>
+  		<input type="file" id="picture" name="picture" accept="image/*"><br>
+  		<br>
+  		<input type="submit" value="Upload">
+	</form>
+    <form action="/SellItem" method="post">
+      <p>
+        <label for="description">Item Description:</label><br>
+        <textarea id="description" name="description" placeholder="Describe your item..." required></textarea>
+      </p>
+      <p>
+        <label for="auctionType">Auction Type:</label><br>
+        <select id="auctionType" name="auctionType" required>
+          <option value="forward" disabled selected>Choose Auction Type...</option>
+          <option value="forward">Forward Auction</option>
+          <option value="dutch">Dutch Auction</option>
+        </select>
+      </p>
+      <p>
+        <label for="duration">Auction Duration:</label><br>
+        <input type="number" id="durationDays" name="durationDays" max="10">Days
+        <input type="number" id="durationHours" name="durationHours" max="23">Hours
+        <input type="number" id="durationMinutes" name="durationMinutes" min="1" max="59" required>Minutes
+      </p>
+      <p>
+        <label for="startingBid">Starting Bid Price:</label><br>
+        <input type="number" id="startingBid" name="startingBid" required>
+      </p>
+      <p>
+        <input type="submit" value="Submit">
+      </p>
+    </form>
+  </body>
+</html>

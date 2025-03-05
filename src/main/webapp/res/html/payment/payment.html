@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Get Your Item!</title>
+</head>
+<body>
+	<!-- Provide a form that shows the user’s stored address and fields to enter payment details: credit card number, holder's name, expiration date, security code -->
+	<h1>Payment</h1>
+	<h2>Shipping Address</h2>
+	<p>
+		<!-- Here should be the address of the user get from the database -->
+		<!-- This is just a placeholder -->
+		1060 Portage Pkwy, On, L4K 0K3
+	</p>
+	<form action="/Payment" method="post">
+		<p>
+			<label for="cardNumber">Credit Card Number:</label><br>
+			<input type="text" id="cardNumber" name="cardNumber" minlength="16" maxlength="16" pattern="^[0-9]{16}$"  required>
+		</p>
+		<p>
+			<label for="nameOnCard">Name on Card:</label><br>
+			<input type="text" id="nameOnCard" name="nameOnCard" required>
+		</p>
+		<p>
+			 Expiration Date: MM/YY<br>
+			 <select name="expireMM" id="expireMM">
+			 	<option value="" disabled selected>Month</option>
+			 	<option value="01">01</option>
+			 	<option value="02">02</option>
+			 	<option value="03">03</option>
+			 	<option value="04">04</option>
+			 	<option value="05">05</option>
+			 	<option value="06">06</option>
+			 	<option value="07">07</option>
+			 	<option value="08">08</option>
+			 	<option value="09">09</option>
+			 	<option value="10">10</option>
+			 	<option value="11">11</option>
+			 	<option value="12">12</option>
+			 </select>
+			 /
+			 <select name="expireYY" id="expireYY">
+			 	<option value="" disabled selected>Year</option>
+			 	<option value="25">2025</option>
+			 	<option value="26">2026</option>
+			 	<option value="27">2027</option>
+			 	<option value="28">2028</option>
+			 	<option value="29">2029</option>
+			 	<option value="30">2030</option>
+			 	<option value="31">2031</option>
+			 	<option value="32">2032</option>
+			 	<option value="33">2033</option>
+			 	<option value="34">2034</option>
+			 </select>
+			 <input type="hidden" name="expiryDate" id="expiryDate" maxlength="4">
+			 <!-- add a JS here to combine the MM and YY before submitting -->
+		<p>
+			<label for="securityCode">Security Code:</label><br>
+			<input type="text" name="securityCode" id="securityCode" minlength="3" maxlength="4" pattern="[0-9]+" required>
+		</p>
+		<p>
+			<label for="phoneNumber">Phone Number (optional):</label><br>
+			<input type="number" name="phoneNumber" id="phoneNumber" minlength="4" maxlength="15">
+		<p>
+			<input type="submit" value="Confirm Payment">
+		</p>
+
+
+	</form>
+</body>
+</html>
